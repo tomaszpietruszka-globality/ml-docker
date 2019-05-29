@@ -1,0 +1,10 @@
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - docker build -t piercefreeman/cuda-python37 cuda-python37
+
+script:
+  - bundle exec rake test
