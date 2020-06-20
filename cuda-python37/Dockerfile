@@ -31,3 +31,9 @@ RUN cd /tmp/Python37/Python-3.7.0 && \
     make altinstall
 
 RUN rm -rf /tmp/Python37
+
+# pip -> pip3.7
+RUN ln -s /usr/local/bin/pip3.7 /usr/local/bin/pip
+
+# pip -> pip3.7
+RUN ln -s /usr/local/bin/python3.7 /usr/local/bin/python
