@@ -18,15 +18,16 @@ RUN apt-get update && \
     apt-get install -y libffi-dev && \
     apt-get install -y python3-dev && \
     apt-get install -y python3-setuptools && \
-    apt-get install -y wget
+    apt-get install -y wget && \
+    apt-get install -y liblzma-dev
 
 RUN mkdir /tmp/Python37
 
 RUN cd /tmp/Python37 && \
-    wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz && \
-    tar xvf Python-3.7.0.tar.xz
+    wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tar.xz && \
+    tar xvf Python-3.7.7.tar.xz
 
-RUN cd /tmp/Python37/Python-3.7.0 && \
+RUN cd /tmp/Python37/Python-3.7.7 && \
     ./configure && \
     make altinstall
 
