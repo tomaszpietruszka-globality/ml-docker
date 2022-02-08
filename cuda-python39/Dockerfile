@@ -40,3 +40,6 @@ RUN ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip
 
 # pip -> pip3.9
 RUN ln -s /usr/local/bin/python3.9 /usr/local/bin/python
+
+# ensure wheel is available when installing requirements
+RUN pip install wheel
