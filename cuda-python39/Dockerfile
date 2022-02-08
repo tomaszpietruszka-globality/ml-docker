@@ -1,5 +1,5 @@
 # Install base cuda
-FROM nvidia/cuda:11.0.3-base-ubuntu20.04
+FROM nvidia/cuda:11.6.0-devel-ubuntu20.04 as cuda
 
 ENV DEBIAN_FRONTEND=noninteractive
 
